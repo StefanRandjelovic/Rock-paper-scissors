@@ -7,6 +7,8 @@ interface SimpleScore {
   setWins: () => void;
   loses: number;
   setLoses: () => void;
+  tie: number;
+  setTies: () => void;
 }
 
 export const simpleScore = create<SimpleScore>()(
@@ -16,6 +18,8 @@ export const simpleScore = create<SimpleScore>()(
       setWins: () => set({ wins: get().wins + 1 }),
       loses: 0,
       setLoses: () => set({ loses: get().loses + 1 }),
+      tie: 0,
+      setTies: () => set({ tie: get().tie + 1 }),
     }),
     { name: "score" }
   )
