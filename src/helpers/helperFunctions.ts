@@ -5,7 +5,7 @@ const handleResults = (
   setLoses: () => void,
   setTies: () => void,
   setMessage: (param: any) => void
-) => {
+): void => {
   const computerMove = Math.floor(Math.random() * 3);
   const realCM =
     computerMove === 0
@@ -63,4 +63,14 @@ const handleResults = (
   }
 };
 
-export { handleResults };
+const handleReset = (
+  resetWins: () => void,
+  resetLoses: () => void,
+  resetTies: () => void
+): void => {
+  resetWins();
+  resetLoses();
+  resetTies();
+};
+
+export { handleResults, handleReset };
