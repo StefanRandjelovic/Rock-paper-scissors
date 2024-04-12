@@ -12,6 +12,7 @@ import { handleResults, handleReset } from "@helpers/helperFunctions";
 
 // COMPONENTS
 import GameCard from "./components/gameCard";
+import NavBar from "./components/NavBar";
 
 function App() {
   // GLOBAL VARIABLES
@@ -34,7 +35,8 @@ function App() {
   const namesArr: string[] = ["rock", "paper", "scissors"];
 
   return (
-    <>
+    <main>
+      <NavBar />
       <div
         className="card-container"
         onClick={(event) =>
@@ -54,7 +56,7 @@ function App() {
       </div>
 
       <p id="score">
-        {message}
+        {message ? message : "Play a game to see results."}
         {result === "tie" && `the result is ${result}`}
         {(result === "win" || result === "lose") && `you ${result}`}
       </p>
@@ -64,7 +66,7 @@ function App() {
       <button onClick={() => handleReset(resetWins, resetLoses, resetTies)}>
         Reset score
       </button>
-    </>
+    </main>
   );
 }
 
