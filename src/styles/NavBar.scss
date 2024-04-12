@@ -1,0 +1,25 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  #anotherGameMenu {
+    #anotherGameMenuHidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  #themeSelector {
+    display: flex;
+    gap: 10px;
+    #themeSelectorInner {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: start;
+
+      #numbers{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
