@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!-- ClipArt by Arvin61r58 (http://openclipart.org/user-detail/Arvin61r58) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 557.34882 727.40247"
+   height="727.40247"
+   width="557.34882">
+  <title
+     id="title4727">Scrolll</title>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4290">
+      <stop
+         style="stop-color:#d3b292;stop-opacity:1"
+         offset="0"
+         id="stop4292" />
+      <stop
+         style="stop-color:#b28271;stop-opacity:0;"
+         offset="1"
+         id="stop4294" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4202">
+      <stop
+         id="stop4204"
+         offset="0"
+         stop-color="#d9c6a8" />
+      <stop
+         id="stop4206"
+         offset="0.166667"
+         stop-color="#d9c6a8" />
+      <stop
+         id="stop4208"
+         offset="0.333333"
+         stop-color="#ead2ab" />
+      <stop
+         id="stop4210"
+         offset="0.5"
+         stop-color="#f2dec1" />
+      <stop
+         id="stop4212"
+         offset="0.666667"
+         stop-color="#f2dec1" />
+      <stop
+         id="stop4214"
+         offset="0.833333"
+         stop-color="#ead2ab" />
+      <stop
+         id="stop4216"
+         offset="1"
+         stop-color="#ead2ab" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient4202"
+       id="linearGradient4284"
+       x1="324.66635"
+       y1="674.9231"
+       x2="329.09702"
+       y2="276.57663"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7534078,-0.23894794,0.26392057,1.9366579,-299.92991,-306.235)" />
+    <linearGradient
+       xlink:href="#linearGradient4290"
+       id="linearGradient4296"
+       x1="346.52048"
+       y1="321.60471"
+       x2="346.52048"
+       y2="274.26022"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7534078,-0.23894794,0.26392057,1.9366579,-300.14534,-307.81586)" />
+    <filter
+       height="1.04"
+       y="-0.02"
+       width="1.04"
+       x="-0.02"
+       style="color-interpolation-filters:sRGB"
+       id="filter4665">
+      <feTurbulence
+         baseFrequency="0.14399999999999999"
+         numOctaves="5"
+         type="fractalNoise"
+         result="result91"
+         id="feTurbulence4667" />
+      <feDisplacementMap
+         scale="4"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic"
+         in2="result91"
+         id="feDisplacementMap4669"
+         yChannelSelector="A" />
+      <feComposite
+         in="SourceGraphic"
+         operator="atop"
+         in2="result5"
+         id="feComposite4671" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Scrolll</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Arvin61r58</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Openclipart.org</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>https://openclipart.org/</dc:identifier>
+        <dc:source>https://openclipart.org/user-detail/Arvin61r58</dc:source>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>scroll</rdf:li>
+            <rdf:li>parchment</rdf:li>
+            <rdf:li>paper</rdf:li>
+            <rdf:li>papyrus</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>old scroll or parchment</dc:description>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="translate(-103.82558,-193.66098)">
+    <g
+       id="g4717"
+       transform="matrix(0.91572685,0,0,0.79178097,13.189683,131.37012)">
+      <path
+         style="fill:url(#linearGradient4284);fill-opacity:1;stroke:#a27161;stroke-width:1.76159382;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4665)"
+         d="m 159.35508,177.43144 c -21.12869,2.87934 -35.66975,24.14662 -32.4856,47.51201 l 5.50556,40.39998 5.50556,40.39998 12.66195,39.42476 7.15434,20.40528 -16.177,20.36434 12.87739,41.00558 -9.12831,18.59867 14.63387,21.80134 13.15474,21.64515 -8.08415,58.35415 11.44609,41.20064 12.98717,20.41551 -7.48161,19.98447 -5.37512,35.44191 22.25004,34.89766 -7.51463,51.83564 22.22114,23.9878 -7.48161,19.98449 10.58438,34.8772 -1.65083,41.37523 -38.2501,5.21258 c -21.12857,2.87932 -35.66985,24.14594 -32.48558,47.51216 3.19013,23.4093 22.88588,39.96638 44.01445,37.08706 l 459.00022,-62.55085 c 21.16954,-2.88491 35.67584,-24.10293 32.48571,-47.51222 l -5.50556,-40.39998 -15.52451,-39.03464 10.45393,-40.96467 -11.4461,-41.20064 -10.66319,-24.75776 13.96073,-15.23166 -14.30866,-40.81054 -15.63428,-18.44456 10.12872,-21.95542 c -3.60852,-14.95904 -13.84737,-35.49793 -5.50556,-40.4 l 1.4354,-42.95609 -22.68091,-38.05939 -1.99669,-36.04749 9.88439,-34.44616 -14.16999,-50.49078 -13.87779,-37.64883 2.86667,-43.15113 -5.50556,-40.39998 38.25012,-5.21259 c 21.16954,-2.88491 35.67598,-24.10196 32.48571,-47.51224 -3.18415,-23.36539 -22.84502,-39.97175 -44.01456,-37.08684 z"
+         id="path4153" />
+      <path
+         style="fill:none;stroke:#a27161;stroke-width:1.76159382;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 170.88394,262.03052 420.75027,-57.3383"
+         id="path4157" />
+      <path
+         style="opacity:0.75;fill:#b28271;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.5"
+         d="m 176.70835,876.55579 c -21.12854,2.87932 -35.66984,24.14593 -32.48558,47.51216 3.19014,23.40929 22.88591,39.96638 44.01445,37.08706 21.16914,-2.88485 35.67582,-24.10292 32.48568,-47.51221 l -38.25011,5.21258 c 10.60472,-1.44517 17.85812,-12.0542 16.26608,-23.7366 -1.59204,-11.68244 -11.42579,-20.00816 -22.03052,-18.56299 z"
+         id="path4151" />
+      <path
+         style="fill:none;stroke:#a27161;stroke-width:1.76159382;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4665)"
+         d="m 188.23722,961.15501 c 21.16913,-2.88485 35.6758,-24.10292 32.48566,-47.51221 l -5.76443,-42.29959"
+         id="path4159" />
+      <path
+         style="fill:none;stroke:#a27161;stroke-width:1.76159382;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4665)"
+         d="m 176.70835,876.55581 c 10.60471,-1.44517 20.43847,6.88056 22.03051,18.563 1.59204,11.68241 -5.66137,22.29142 -16.26608,23.73659 l 38.2501,-5.21258"
+         id="path4161" />
+      <path
+         style="opacity:0.75;fill:#bc937f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.5"
+         d="m 203.36976,214.51826 c 3.18722,23.38791 -11.3369,44.63016 -32.4858,47.51225 -10.56429,1.43966 -20.41216,-6.83844 -22.00729,-18.54356 -1.59207,-11.68264 5.67857,-22.31642 16.24285,-23.75609 z"
+         id="path4149" />
+      <path
+         style="fill:none;stroke:#a27161;stroke-width:1.76159382;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4665)"
+         d="m 159.35508,177.43144 c 21.14892,-2.88209 40.83052,13.72144 44.01467,37.08683 3.18722,23.38792 -11.3369,44.63016 -32.48582,47.51226 -10.56426,1.43966 -20.41214,-6.83844 -22.00727,-18.54357 -1.59207,-11.68263 5.67857,-22.31642 16.24283,-23.75608 l 38.25026,-5.21261"
+         id="path4155" />
+      <path
+         id="path4288"
+         d="m 398.36423,141.92738 c -74.53599,10.5258 -149.2597,20.01234 -223.5808,31.89343 -1.91594,4.23643 5.55707,4.9703 7.56211,7.35079 11.67667,6.94433 19.30212,19.98189 20.60525,34.23651 1.59606,14.79653 -5.53283,28.85294 -15.21422,38.35678 -3.45141,5.64164 6.51838,2.28192 8.89215,2.40884 147.5211,-18.22646 294.88873,-39.06005 442.17067,-58.23282 -0.52433,-4.37176 5.07569,-4.83267 8.30252,-4.18204 0.46369,-2.46253 -0.35724,-2.26889 2.37775,-2.61042 -0.7259,-4.08028 3.80888,-5.07969 6.0639,-7.25781 -0.58405,-3.88213 5.56395,-3.57291 3.28894,-8.14708 4.82642,0.96483 -0.47627,-10.35963 4.88189,-10.01841 -0.26685,-5.82666 -1.70568,-13.04972 -1.61301,-19.54627 0.29901,-4.55297 -3.26044,-4.94423 -3.81849,-9.25731 -2.18378,-4.07033 -5.26341,-8.38759 -5.74952,-12.70838 -3.69967,1.72981 -2.43205,-2.41511 -4.55745,-3.96114 -4.72082,2.53408 -5.11458,-7.19326 -9.9794,-4.38274 0.35911,-3.87236 -3.46666,-0.15663 -4.2305,-3.02447 -2.51564,0.85742 -3.39457,0.69188 -5.41906,-0.58867 -6.90027,1.6019 -13.04939,-0.17785 -20.22184,1.65174 -69.98745,8.82559 -139.86523,18.50366 -209.76089,28.01947 z M 621.0642,113.22346 c 0.36996,0.15511 0.40916,1.33319 0,0 z"
+         style="opacity:0.44599998;fill:url(#linearGradient4296);fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
