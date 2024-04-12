@@ -1,5 +1,36 @@
 .card {
-  width: 100px;
-  height: 100px;
-  background-color: gray;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+@mixin basicStyle($img, $colorBg, $color) {
+  background-image: url($img);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $colorBg;
+  box-shadow: 0px 0px 0px 10px rgba($color: $color, $alpha: 1),
+    0px 0px 0 15px rgba($color: $color, $alpha: 0.5),
+    0px 0px 0 20px rgba($color: $color, $alpha: 0.2);
+  transition: transform 0.25s ease;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
+#rock {
+  @include basicStyle("/src/svg/rock.svg", transparent, #b8b893);
+  grid-area: a;
+}
+#paper {
+  @include basicStyle("/src/svg/paper.svg", orange, orange);
+  grid-area: b;
+}
+#scissors {
+  @include basicStyle("/src/svg/scissors.svg", red, red);
+  grid-area: c;
+  justify-self: center;
 }
