@@ -1,7 +1,20 @@
+// FONT IMPORT
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+$darkBlue: rgb(1, 1, 48);
+$white: rgb(255, 255, 255);
+
+html {
+  padding: 15px;
+  background-color: $darkBlue;
+  color: $white;
+  font-family: "Permanent Marker", cursive;
 }
 
 html,
@@ -10,14 +23,17 @@ body,
   height: 100vh;
 }
 
-#root {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
 .card-container {
-  display: flex;
-  gap: 15px;
+  display: grid;
+  grid-template-areas: "a b" "c c";
+  column-gap: 55px;
+  row-gap: 25px;
 }
