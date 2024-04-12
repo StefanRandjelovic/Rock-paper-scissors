@@ -1,0 +1,20 @@
+rock beats scissors and saw loses to wood and paper
+
+paper beats rock and wood loses to scissors and saw
+
+scissors beats paper and saw loses to wood and rock
+
+wood beats rock and scissors loses to paper and saw
+
+saw beats paper and wood loses to rock and scissors
+
+rock smashes scissors
+paper covers rock
+scissors cut paper
+wood displaces rock
+saw ripps paper
+rock blunts saw
+paper destroys wood
+scissors outperform saw
+wood splinters scissors
+saw cuts down wood
