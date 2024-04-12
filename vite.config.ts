@@ -12,6 +12,7 @@ export default defineConfig({
       "@store": path.resolve(__dirname, "./src/zustandStore"),
       "@styles": path.resolve(__dirname, "./src/styles"),
       "@components": path.resolve(__dirname, "./src/components"),
+      "@svg": path.resolve(__dirname, "./src/svg"),
     },
   },
 });
