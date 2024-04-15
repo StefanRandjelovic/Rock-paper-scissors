@@ -73,4 +73,17 @@ const handleReset = (
   resetTies();
 };
 
-export { handleResults, handleReset };
+const handleShowMenu = (
+  event: any,
+  setShowModal: (param: boolean) => void,
+  showMenu: boolean
+): void => {
+  event.stopPropagation();
+  if (event.target.id === "showMenu" || event.target.tagName === "SPAN") {
+    setShowModal(!showMenu);
+  } else {
+    return;
+  }
+};
+
+export { handleResults, handleReset, handleShowMenu };
