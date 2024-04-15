@@ -2,23 +2,77 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+
   #anotherGameMenu {
+    p:first-child {
+      display: inline-flex;
+      gap: 10px;
+
+      #normal,
+      #upSide {
+        transition: all 0.5s ease;
+      }
+
+      #upSide {
+        display: block;
+        transform: rotateX(180deg);
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    #anotherGameMenu {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.5s ease;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
     #anotherGameMenuHidden {
       opacity: 0;
       visibility: hidden;
+      transition: all 0.5s ease;
     }
   }
+
   #themeSelector {
     display: flex;
     gap: 10px;
+
     #themeSelectorInner {
       display: flex;
       flex-direction: column-reverse;
       justify-content: start;
 
-      #numbers{
+      input[type="range"] {
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: lightgrey;
+        border-radius: 10px;
+        padding: 2px;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 15px;
+          width: 15px;
+          background-color: red;
+          border-radius: 10px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      #numbers {
         display: flex;
         justify-content: space-between;
+        padding: 0 5px;
       }
     }
   }
