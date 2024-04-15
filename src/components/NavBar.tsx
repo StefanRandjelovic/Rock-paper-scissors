@@ -1,14 +1,35 @@
 // STYLES
 import "@styles/NavBar.scss";
 
+// DEV DEPENDENCIES
+import { useEffect, useState } from "react";
+import { handleShowMenu } from "@/helpers/helperFunctions";
+import { themeSet } from "@/zustandStore/globalStore";
+
 const NavBar = (): React.JSX.Element => {
+  // LOCAL STATE VARIABLE
+  const [showModal, setShowModal] = useState(false);
+
+  // GLOBAL STATE VARIABLE
+  const { theme, setTheme } = themeSet();
+
+  useEffect((): void => {
+    document.documentElement.addEventListener("click", (): void =>
+      setShowModal(false)
+    );
+  }, []);
+
   return (
     <nav>
-      <div id="anotherGameMenu">
-        <p>
-          Play another game <span>v</span>
+      <div
+        className={`theme${theme}`}
+        id="anotherGameMenu"
+        onClick={(event) => handleShowMenu(event, setShowModal, showModal)}
+      >
+        <p id="showMenu">
+          Play another game <span id={showModal ? "upSide" : "normal"}>v</span>
         </p>
-        <div id="anotherGameMenuHidden">
+        <div id={showModal ? "anotherGameMenu" : "anotherGameMenuHidden"}>
           <p>Rock, Paper, Scissors</p>
           <p>Rock, Paper, Scissors, Wood, Saw</p>
           <p>Coin toss</p>
@@ -25,7 +46,10 @@ const NavBar = (): React.JSX.Element => {
             <p>3</p>
           </div>
           <input
-            onChange={(event) => console.log(event.target.value)}
+            value={theme}
+            onChange={(event) => {
+              setTheme(Number(event.target.value));
+            }}
             type="range"
             min={1}
             max={3}
