@@ -1,0 +1,17 @@
+.howTo {
+  border: 2px solid white;
+  padding: 35px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  border-radius: 0 30px;
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    font-size: 4rem;
+  }
+}
