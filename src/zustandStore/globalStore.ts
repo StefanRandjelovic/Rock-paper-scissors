@@ -2,6 +2,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+// SCORE TRACKING
 interface SimpleScore {
   wins: number;
   setWins: () => void;
@@ -28,5 +29,21 @@ export const simpleScore = create<SimpleScore>()(
       resetTies: () => set({ tie: 0 }),
     }),
     { name: "score" }
+  )
+);
+
+// THEME CHANGER
+interface Theme {
+  theme: number;
+  setTheme: (param: number) => void;
+}
+
+export const themeSet = create<Theme>()(
+  persist(
+    (set) => ({
+      theme: 1,
+      setTheme: (param) => set({ theme: param }),
+    }),
+    { name: "theme" }
   )
 );
