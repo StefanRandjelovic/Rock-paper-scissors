@@ -17,12 +17,6 @@ html {
   font-family: "Permanent Marker", cursive;
 }
 
-html,
-body,
-#root {
-  height: 100vh;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -36,4 +30,31 @@ main {
   grid-template-areas: "a b" "c c";
   column-gap: 55px;
   row-gap: 25px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+
+  #score {
+    user-select: none;
+  }
+
+  .resultsInner {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    p:nth-of-type(2) {
+      align-self: center;
+    }
+
+    p:last-of-type {
+      align-self: flex-end;
+    }
+  }
 }
