@@ -2,10 +2,16 @@
   border: 2px solid white;
   padding: 35px;
   transform: rotate(45deg);
-  position: absolute;
-  right: 5%;
+  position: sticky;
+  left: 85%;
   bottom: 10%;
   border-radius: 0 30px;
+  transition: transform 0.25s ease;
+
+  &:hover {
+    cursor: help;
+    transform: scale(1.05) rotate(45deg);
+  }
 
   p {
     position: absolute;
