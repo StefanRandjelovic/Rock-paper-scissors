@@ -1,11 +1,15 @@
 // STYLES
 import "@styles/HowTo.scss";
 
-const HowTo = (): React.JSX.Element => {
+type Title = {
+  title: string;
+  func: () => void;
+};
+
+const HowTo = ({ title, func }: Title): React.JSX.Element => {
   return (
-    <div className="howTo">
+    <div className="howTo" title={title} onClick={func}>
       <p>?</p>
-     
     </div>
   );
 };
