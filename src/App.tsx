@@ -1,5 +1,5 @@
 // DEV DEPENDENCIES
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // STYLES
 import "@styles/global.scss";
@@ -15,6 +15,10 @@ import GameCard from "./components/gameCard";
 import NavBar from "./components/NavBar";
 import Button from "./components/Button";
 import HowTo from "./components/HowTo";
+import GameInfo from "./components/GameInfo";
+
+// INFO
+import { infoArrRPS } from "./helpers/InfoArray";
 
 function App() {
   // GLOBAL VARIABLES
@@ -33,8 +37,17 @@ function App() {
   // LOCAL STATES
   const [result, setResult] = useState("");
   const [message, setMessage] = useState("");
+  const [showHelp, setShowHelp] = useState(false);
 
   const namesArr: string[] = ["rock", "paper", "scissors"];
+
+  useEffect((): void => {
+    window.addEventListener("keydown", (event: any): void => {
+      if (event.key === "Escape" && showHelp) {
+        setShowHelp(false);
+      }
+    });
+  }, []);
 
   return (
     <main>
@@ -71,7 +84,13 @@ function App() {
           funcParam={() => handleReset(resetWins, resetLoses, resetTies)}
         />
       </div>
-      <HowTo />
+      <HowTo title="How to play" func={() => setShowHelp(true)} />
+      <GameInfo
+        h1={infoArrRPS.title}
+        p={infoArrRPS.howTo}
+        func={() => setShowHelp(false)}
+        hidShow={showHelp}
+      />
     </main>
   );
 }
