@@ -1,3 +1,6 @@
+// INFO
+import { infoArrRPS } from "@/helpers/InfoArray";
+
 // STYLES
 import "@styles/NavBar.scss";
 
@@ -17,6 +20,9 @@ const NavBar = (): React.JSX.Element => {
     document.documentElement.addEventListener("click", (): void =>
       setShowModal(false)
     );
+    return document.documentElement.removeEventListener("click", (): void =>
+      setShowModal(false)
+    );
   }, []);
 
   return (
@@ -29,13 +35,15 @@ const NavBar = (): React.JSX.Element => {
         <p id="showMenu">
           Play another game <span id={showModal ? "upSide" : "normal"}>v</span>
         </p>
-        <div id={showModal ? "anotherGameMenu" : "anotherGameMenuHidden"}>
+        <div
+          id={showModal ? "anotherGameMenuInner" : "anotherGameMenuInnerHidden"}
+        >
           <p>Rock, Paper, Scissors</p>
           <p>Rock, Paper, Scissors, Wood, Saw</p>
           <p>Coin toss</p>
         </div>
       </div>
-      <h1>Rock, Paper, Scissors game</h1>
+      <h1>{infoArrRPS.title}</h1>
 
       <div id="themeSelector">
         <p>Theme:</p>
