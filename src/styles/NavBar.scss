@@ -1,64 +1,72 @@
 nav {
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 20px;
 
   h1 {
     text-align: center;
   }
 
-  #anotherGameMenu {
-    p,
-    span {
-      display: inline-block;
-      transition: color 0.25s ease;
-      &:hover {
-        color: orange;
-      }
-    }
+  .navigation {
+    justify-self: center;
+    display: flex;
+    gap: 10px;
 
-    #showMenu {
-      display: inline-flex;
-      gap: 10px;
-
-      #normal,
-      #upSide {
-        transition: transform 0.5s ease;
+    #anotherGameMenu {
+      p,
+      span {
+        display: inline-block;
+        transition: color 0.25s ease;
+        &:hover {
+          color: orange;
+        }
       }
 
-      #upSide {
-        display: block;
-        transform: rotateX(180deg);
+      #showMenu {
+        display: inline-flex;
+        gap: 10px;
+
+        #normal,
+        #upSide {
+          transition: transform 0.5s ease;
+        }
+
+        #upSide {
+          display: block;
+          transform: rotateX(180deg);
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      #anotherGameMenuInner,
+      #anotherGameMenuInnerHidden {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        transition: all 0.5s ease;
       }
 
-      &:hover {
-        cursor: pointer;
+      #anotherGameMenuInner {
+        opacity: 1;
+        visibility: visible;
+
+        p:hover {
+          cursor: pointer;
+        }
       }
-    }
-    #anotherGameMenuInner,
-    #anotherGameMenuInnerHidden {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      transition: all 0.5s ease;
-    }
 
-    #anotherGameMenuInner {
-      opacity: 1;
-      visibility: visible;
-
-      p:hover {
-        cursor: pointer;
+      #anotherGameMenuInnerHidden {
+        opacity: 0;
+        visibility: hidden;
       }
-    }
-
-    #anotherGameMenuInnerHidden {
-      opacity: 0;
-      visibility: hidden;
     }
   }
 
   #themeSelector {
+    justify-self: center;
     display: flex;
     gap: 10px;
 
