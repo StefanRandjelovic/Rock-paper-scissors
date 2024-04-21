@@ -27,7 +27,8 @@
       "@store/*": ["src/zustandStore/*"],
       "@styles/*": ["src/styles/*"],
       "@components/*": ["src/components/*"],
-      "@svg/*": ["src/svg/*"]
+      "@svg/*": ["src/svg/*"],
+      "@pages/*": ["src/pages/*"]
     }
   },
   "include": ["src"],
