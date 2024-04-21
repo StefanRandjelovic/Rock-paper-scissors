@@ -1,5 +1,5 @@
 // INFO
-import { infoArrRPS } from "@/helpers/InfoArray";
+import { infoArrRPS, infoArrRPSWS, infoArrCT } from "@/helpers/InfoArray";
 
 // STYLES
 import "@styles/NavBar.scss";
@@ -8,6 +8,7 @@ import "@styles/NavBar.scss";
 import { useEffect, useState } from "react";
 import { handleShowMenu } from "@/helpers/helperFunctions";
 import { themeSet } from "@/zustandStore/globalStore";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const NavBar = (): React.JSX.Element => {
   // LOCAL STATE VARIABLE
@@ -15,6 +16,8 @@ const NavBar = (): React.JSX.Element => {
 
   // GLOBAL STATE VARIABLE
   const { theme, setTheme } = themeSet();
+
+  const navigate = useNavigate();
 
   useEffect((): void => {
     document.documentElement.addEventListener("click", (): void =>
@@ -25,25 +28,54 @@ const NavBar = (): React.JSX.Element => {
     );
   }, []);
 
+  const getTitle: () => string | undefined = () => {
+    if (pathname === "/") {
+      return "Game Menu";
+    } else if (pathname === "/rps") {
+      return `${infoArrRPS.title}`;
+    } else if (pathname === "/rpsws") {
+      return `${infoArrRPSWS.title}`;
+    } else if (pathname === "/coin-toss") {
+      return `${infoArrCT.title}`;
+    }
+  };
+
+  // URL STRING GETTER
+  const { pathname } = useLocation();
+  console.log(pathname);
+
   return (
     <nav>
-      <div
-        className={`theme${theme}`}
-        id="anotherGameMenu"
-        onClick={(event) => handleShowMenu(event, setShowModal, showModal)}
-      >
-        <p id="showMenu">
-          Play another game <span id={showModal ? "upSide" : "normal"}>v</span>
-        </p>
+      <div className="navigation">
+        <p onClick={(): void => navigate(-1)}>V</p>
+        <Link to={"/"}>Home Page</Link>
         <div
-          id={showModal ? "anotherGameMenuInner" : "anotherGameMenuInnerHidden"}
+          id="anotherGameMenu"
+          onClick={(event) => handleShowMenu(event, setShowModal, showModal)}
         >
-          <p>Rock, Paper, Scissors</p>
-          <p>Rock, Paper, Scissors, Wood, Saw</p>
-          <p>Coin toss</p>
+          <p id="showMenu">
+            Play another game{" "}
+            <span id={showModal ? "upSide" : "normal"}>v</span>
+          </p>
+          <div
+            id={
+              showModal ? "anotherGameMenuInner" : "anotherGameMenuInnerHidden"
+            }
+          >
+            <Link to={"/rps"} onClick={() => setShowModal(false)}>
+              Rock, Paper, Scissors
+            </Link>
+            <Link to={"/rpsws"} onClick={() => setShowModal(false)}>
+              Rock, Paper, Scissors, Wood, Saw
+            </Link>
+            <Link to={"/coin-toss"} onClick={() => setShowModal(false)}>
+              Coin toss
+            </Link>
+          </div>
         </div>
       </div>
-      <h1>{infoArrRPS.title}</h1>
+
+      <h1>{getTitle()}</h1>
 
       <div id="themeSelector">
         <p>Theme:</p>
