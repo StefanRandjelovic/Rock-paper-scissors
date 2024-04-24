@@ -10,19 +10,37 @@
 $darkBlue: rgb(1, 1, 48);
 $white: rgb(255, 255, 255);
 
-html {
+html,
+html#theme1 {
   padding: 15px;
   background-color: $darkBlue;
   color: $white;
   font-family: "Permanent Marker", cursive;
 }
 
-main {
+html#theme2 {
+  background-color: lightseagreen;
+}
+
+html#theme3 {
+  background-color: lightgray;
+}
+
+main,
+main.theme1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+main.theme2 {
+  color: red;
+}
+
+main.theme3 {
+  color: black;
 }
 
 .card-container {
@@ -55,6 +73,45 @@ main {
 
     p:last-of-type {
       align-self: flex-end;
+    }
+  }
+}
+
+// HOME DEFAULT THEME 1
+#home,
+#home.theme1 {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    all: unset;
+    transition: color 0.25s ease;
+    &:hover {
+      cursor: pointer;
+      color: orange;
+    }
+  }
+}
+
+// HOME THEME 2
+#home.theme2 {
+  color: red;
+  a {
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+// HOME THEME 3
+#home.theme3 {
+  color: black;
+  a {
+    &:hover {
+      color: peru;
     }
   }
 }

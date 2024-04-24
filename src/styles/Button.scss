@@ -1,4 +1,6 @@
-button {
+// DEFAULT, THEME 1
+button,
+button.theme1 {
   all: unset;
   border: 2px solid white;
   padding: 5px 10px;
@@ -9,4 +11,14 @@ button {
     cursor: pointer;
     transform: scale(1.05);
   }
+}
+
+// THEME 2
+button.theme2 {
+  border-color: red;
+}
+
+// THEME 3
+button.theme3 {
+  border-color: black;
 }

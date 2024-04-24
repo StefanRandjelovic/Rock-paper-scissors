@@ -1,4 +1,6 @@
-.howTo {
+// DEFAULT THEME 1
+.howTo,
+.howTo.theme1 {
   border: 2px solid white;
   padding: 35px;
   transform: rotate(45deg);
@@ -20,4 +22,14 @@
     transform: translate(-50%, -50%) rotate(-60deg);
     font-size: 4rem;
   }
+}
+
+// THEME 2
+.howTo.theme2 {
+  border-color: red;
+}
+
+// THEME 3
+.howTo.theme3 {
+  border-color: black;
 }

@@ -1,20 +1,54 @@
-nav {
+// DEFAULT, THEME 1
+nav,
+nav.theme1 {
   width: 100%;
   display: grid;
+  gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0 20px;
+  padding: 0 20px 0 50px;
+  margin-bottom: 80px;
+
+  a {
+    all: unset;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   h1 {
     text-align: center;
   }
 
   .navigation {
+    position: relative;
     justify-self: center;
     display: flex;
     gap: 10px;
 
+    #homePage {
+      display: inline-block;
+      transition: color 0.25s ease;
+      &:hover {
+        color: orange;
+      }
+    }
+
+    #backButton {
+      position: absolute;
+      top: -10px;
+      left: -30px;
+      transform: rotate(90deg);
+      font-size: xx-large;
+      transition: color 0.25s ease;
+      &:hover {
+        color: orange;
+        cursor: pointer;
+      }
+    }
+
     #anotherGameMenu {
       p,
+      a,
       span {
         display: inline-block;
         transition: color 0.25s ease;
@@ -29,12 +63,13 @@ nav {
 
         #normal,
         #upSide {
+          align-self: center;
           transition: transform 0.5s ease;
         }
 
         #upSide {
           display: block;
-          transform: rotateX(180deg);
+          transform: rotate(180deg);
         }
 
         &:hover {
@@ -43,6 +78,7 @@ nav {
       }
       #anotherGameMenuInner,
       #anotherGameMenuInnerHidden {
+        position: absolute;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -99,6 +135,84 @@ nav {
         display: flex;
         justify-content: space-between;
         padding: 0 5px;
+      }
+    }
+  }
+}
+
+// THEME 2
+nav.theme2 {
+  color: red;
+  .navigation {
+    #homePage {
+      &:hover {
+        color: black;
+      }
+    }
+
+    #backButton {
+      &:hover {
+        color: black;
+      }
+    }
+
+    #anotherGameMenu {
+      p,
+      a,
+      span {
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+  #themeSelector {
+    #themeSelectorInner {
+      input[type="range"] {
+        background-color: black;
+
+        &::-webkit-slider-thumb {
+          background-color: blue;
+        }
+      }
+    }
+  }
+}
+
+// THEME 3
+nav.theme3 {
+  color: black;
+  .navigation {
+    #homePage {
+      &:hover {
+        color: peru;
+      }
+    }
+
+    #backButton {
+      &:hover {
+        color: peru;
+      }
+    }
+
+    #anotherGameMenu {
+      p,
+      a,
+      span {
+        &:hover {
+          color: peru;
+        }
+      }
+    }
+  }
+  #themeSelector {
+    #themeSelectorInner {
+      input[type="range"] {
+        background-color: cadetblue;
+
+        &::-webkit-slider-thumb {
+          background-color: purple;
+        }
       }
     }
   }

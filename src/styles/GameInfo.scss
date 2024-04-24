@@ -4,6 +4,7 @@
   transition: all 0.5s ease;
 }
 
+// DEFAULT THEME 1
 .InfoOverlay {
   position: absolute;
   top: 10%;
@@ -23,7 +24,8 @@
   visibility: visible;
   transition: all 0.5s ease;
 
-  #close {
+  #close,
+  #close.theme1 {
     position: absolute;
     top: 5%;
     right: 5%;
@@ -33,6 +35,24 @@
       transform: scale(1.05);
       color: orange;
       cursor: pointer;
+    }
+  }
+
+  // THEME 2
+  #close.theme2 {
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+// THEME 3
+.InfoOverlay#theme3 {
+  background-color: rgba($color: purple, $alpha: 0.9);
+
+  #close.theme3 {
+    &:hover {
+      color: cyan;
     }
   }
 }
