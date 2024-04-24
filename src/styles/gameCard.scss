@@ -34,3 +34,15 @@
   grid-area: c;
   justify-self: center;
 }
+#wood {
+  @include basicStyle("/src/svg/wood.svg", blue, blue);
+}
+#saw {
+  @include basicStyle("/src/svg/saw.svg", yellow, yellow);
+}
+#heads {
+  @include basicStyle("/src/svg/coin_head.svg", green, green);
+}
+#tails {
+  @include basicStyle("/src/svg/coin_tail.svg", purple, purple);
+}
