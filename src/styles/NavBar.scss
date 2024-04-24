@@ -25,11 +25,50 @@ nav.theme1 {
     display: flex;
     gap: 10px;
 
+    #menuModal {
+      width: 300%;
+      position: absolute;
+      top: 45px;
+      left: -20px;
+      border-radius: 10px;
+      padding: 5px;
+      background-color: rgb(1, 1, 48);
+
+      a {
+        display: inline-block;
+        cursor: pointer;
+        transition: color 0.25s ease;
+
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+
+    #smallScreen {
+      display: none;
+      position: relative;
+      background-image: url("/src/svg/menu.svg");
+      width: 50px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      filter: invert(100%) sepia(0%) saturate(7470%) hue-rotate(116deg)
+        brightness(109%) contrast(109%);
+
+      &:hover {
+        cursor: pointer;
+        filter: invert(66%) sepia(53%) saturate(3176%) hue-rotate(2deg)
+          brightness(106%) contrast(105%);
+      }
+    }
+
     #homePage {
       display: inline-block;
       transition: color 0.25s ease;
       &:hover {
-        color: orange;
+        color: rgb(255, 165, 0);
       }
     }
 
@@ -46,57 +85,59 @@ nav.theme1 {
       }
     }
 
-    #anotherGameMenu {
-      p,
-      a,
-      span {
-        display: inline-block;
-        transition: color 0.25s ease;
-        &:hover {
-          color: orange;
-        }
-      }
-
-      #showMenu {
-        display: inline-flex;
-        gap: 10px;
-
-        #normal,
-        #upSide {
-          align-self: center;
-          transition: transform 0.5s ease;
+    .bigScreen {
+      #anotherGameMenu {
+        p,
+        a,
+        span {
+          display: inline-block;
+          transition: color 0.25s ease;
+          &:hover {
+            color: orange;
+          }
         }
 
-        #upSide {
-          display: block;
-          transform: rotate(180deg);
+        #showMenu {
+          display: inline-flex;
+          gap: 10px;
+
+          #normal,
+          #upSide {
+            align-self: center;
+            transition: transform 0.5s ease;
+          }
+
+          #upSide {
+            display: block;
+            transform: rotate(180deg);
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        #anotherGameMenuInner,
+        #anotherGameMenuInnerHidden {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          transition: all 0.5s ease;
         }
 
-        &:hover {
-          cursor: pointer;
+        #anotherGameMenuInner {
+          opacity: 1;
+          visibility: visible;
+
+          p:hover {
+            cursor: pointer;
+          }
         }
-      }
-      #anotherGameMenuInner,
-      #anotherGameMenuInnerHidden {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        transition: all 0.5s ease;
-      }
 
-      #anotherGameMenuInner {
-        opacity: 1;
-        visibility: visible;
-
-        p:hover {
-          cursor: pointer;
+        #anotherGameMenuInnerHidden {
+          opacity: 0;
+          visibility: hidden;
         }
-      }
-
-      #anotherGameMenuInnerHidden {
-        opacity: 0;
-        visibility: hidden;
       }
     }
   }
@@ -144,6 +185,24 @@ nav.theme1 {
 nav.theme2 {
   color: red;
   .navigation {
+    #smallScreen {
+      filter: invert(16%) sepia(84%) saturate(7485%) hue-rotate(7deg)
+        brightness(104%) contrast(124%);
+      &:hover {
+        filter: invert(0%) sepia(3%) saturate(14%) hue-rotate(86deg)
+          brightness(95%) contrast(103%);
+      }
+    }
+
+    #menuModal {
+      background-color: lightseagreen;
+
+      a {
+        &:hover {
+          color: black;
+        }
+      }
+    }
     #homePage {
       &:hover {
         color: black;
@@ -183,6 +242,23 @@ nav.theme2 {
 nav.theme3 {
   color: black;
   .navigation {
+    #smallScreen {
+      filter: invert(0%) sepia(3%) saturate(14%) hue-rotate(86deg)
+        brightness(95%) contrast(103%);
+      &:hover {
+        filter: invert(62%) sepia(56%) saturate(500%) hue-rotate(347deg)
+          brightness(82%) contrast(94%);
+      }
+    }
+
+    #menuModal {
+      background-color: lightgray;
+      a {
+        &:hover {
+          color: peru;
+        }
+      }
+    }
     #homePage {
       &:hover {
         color: peru;
