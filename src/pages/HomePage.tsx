@@ -6,10 +6,15 @@ import { Link } from "react-router-dom";
 
 // GLOBAL STATE VARIABLES
 import { themeSet } from "@/zustandStore/globalStore";
+import { useEffect } from "react";
 
 const HomePage = () => {
   // GLOBAL STATE VARIABLES
   const { theme } = themeSet();
+
+  useEffect((): void => {
+    document.title = "Home Page";
+  }, []);
 
   return (
     <div id="home" className={`theme${theme}`}>

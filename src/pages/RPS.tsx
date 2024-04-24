@@ -49,6 +49,7 @@ const RockPaperScissors = () => {
         setShowHelpRPS(false);
       }
     });
+    document.title = "Rock, Paper, Scissors game";
 
     return window.removeEventListener("keydown", (event: any): void => {
       if (event.key === "Escape" && showHelpRPS) {

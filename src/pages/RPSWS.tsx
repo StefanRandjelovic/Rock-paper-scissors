@@ -44,6 +44,7 @@ const RockPaperScissorsWoodSaw = () => {
         setShowHelpRPSWS(false);
       }
     });
+    document.title = "Rock, Paper, Scissors, Wood, Saw game";
 
     return window.removeEventListener("keydown", (event: any): void => {
       if (event.key === "Escape" && showHelpRPSWS) {

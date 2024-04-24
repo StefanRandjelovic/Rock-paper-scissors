@@ -37,6 +37,7 @@ const CoinToss = () => {
         setShowHelpCT(false);
       }
     });
+    document.title = "Coin Toss";
 
     return window.removeEventListener("keydown", (event: any): void => {
       if (event.key === "Escape" && showHelpCT) {
