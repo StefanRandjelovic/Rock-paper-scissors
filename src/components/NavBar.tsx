@@ -16,17 +16,20 @@ import { getTitle } from "@/helpers/helperFunctions";
 const NavBar = (): React.JSX.Element => {
   // LOCAL STATE VARIABLE
   const [showModal, setShowModal] = useState(false);
+  const [smallScreenModal, setSmallScreenModal] = useState(false);
 
   // GLOBAL STATE VARIABLE
   const { theme, setTheme } = themeSet();
 
   useEffect((): void => {
-    document.documentElement.addEventListener("click", (): void =>
-      setShowModal(false)
-    );
-    return document.documentElement.removeEventListener("click", (): void =>
-      setShowModal(false)
-    );
+    document.documentElement.addEventListener("click", (): void => {
+      setShowModal(false);
+      setSmallScreenModal(false);
+    });
+    return document.documentElement.removeEventListener("click", (): void => {
+      setShowModal(false);
+      setSmallScreenModal(false);
+    });
   }, []);
 
   // URL STRING GETTER
@@ -41,33 +44,60 @@ const NavBar = (): React.JSX.Element => {
         <p id="backButton" onClick={(): void => navigate(-1)}>
           V
         </p>
-        <Link id="homePage" to={"/"}>
-          Home Page
-        </Link>
-        <div
-          id="anotherGameMenu"
-          onClick={(event) => handleShowMenu(event, setShowModal, showModal)}
-        >
-          <p id="showMenu">
-            Play another game{" "}
-            <span id={showModal ? "upSide" : "normal"}>v</span>
-          </p>
+        <div className="bigScreen">
+          <Link id="homePage" to={"/"}>
+            Home Page
+          </Link>
           <div
-            id={
-              showModal ? "anotherGameMenuInner" : "anotherGameMenuInnerHidden"
-            }
+            id="anotherGameMenu"
+            onClick={(event) => handleShowMenu(event, setShowModal, showModal)}
           >
-            <Link to={"/rps"} onClick={() => setShowModal(false)}>
+            <p id="showMenu">
+              Play another game{" "}
+              <span id={showModal ? "upSide" : "normal"}>v</span>
+            </p>
+            <div
+              id={
+                showModal
+                  ? "anotherGameMenuInner"
+                  : "anotherGameMenuInnerHidden"
+              }
+            >
+              <Link to={"/rps"} onClick={() => setShowModal(false)}>
+                Rock, Paper, Scissors
+              </Link>
+              <Link to={"/rpsws"} onClick={() => setShowModal(false)}>
+                Rock, Paper, Scissors, Wood, Saw
+              </Link>
+              <Link to={"/coin-toss"} onClick={() => setShowModal(false)}>
+                Coin toss
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div
+          id="smallScreen"
+          onClick={(event: any): void => {
+            event.stopPropagation();
+            setSmallScreenModal(!smallScreenModal);
+          }}
+        ></div>
+        {smallScreenModal && (
+          <div id="menuModal">
+            <Link to={"/"} onClick={() => setSmallScreenModal(false)}>
+              Home Page
+            </Link>
+            <Link to={"/rps"} onClick={() => setSmallScreenModal(false)}>
               Rock, Paper, Scissors
             </Link>
-            <Link to={"/rpsws"} onClick={() => setShowModal(false)}>
+            <Link to={"/rpsws"} onClick={() => setSmallScreenModal(false)}>
               Rock, Paper, Scissors, Wood, Saw
             </Link>
-            <Link to={"/coin-toss"} onClick={() => setShowModal(false)}>
+            <Link to={"/coin-toss"} onClick={() => setSmallScreenModal(false)}>
               Coin toss
             </Link>
           </div>
-        </div>
+        )}
       </div>
 
       <h1>
