@@ -1,9 +1,18 @@
+// STYLES
+import "@styles/global.scss";
+
 // DEV DEPENDENCIES
 import { Link } from "react-router-dom";
 
+// GLOBAL STATE VARIABLES
+import { themeSet } from "@/zustandStore/globalStore";
+
 const HomePage = () => {
+  // GLOBAL STATE VARIABLES
+  const { theme } = themeSet();
+
   return (
-    <div>
+    <div id="home" className={`theme${theme}`}>
       <h1>Chose a game to play</h1>
       <Link to={"/rps"}> Rock, Paper, Scissors</Link>
       <Link to={"/rpsws"}> Rock, Paper, Scissors, Wood, Saw</Link>

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import "@styles/global.scss";
 
 // GLOBAL VARIABLES
-import { simpleScore } from "@store/globalStore";
+import { simpleScore, themeSet } from "@store/globalStore";
 
 // HELPERS
 import { handleResults, handleReset } from "@helpers/helperFunctions";
@@ -20,8 +20,6 @@ import GameInfo from "@/components/GameInfo";
 import { infoArrRPS } from "@/helpers/InfoArray";
 
 const RockPaperScissors = () => {
-
-
   // GLOBAL VARIABLES
   const {
     wins,
@@ -35,23 +33,32 @@ const RockPaperScissors = () => {
     resetTies,
   } = simpleScore();
 
+  const { theme } = themeSet();
+
   // LOCAL STATES
   const [result, setResult] = useState("");
   const [message, setMessage] = useState("");
-  const [showHelp, setShowHelp] = useState(false);
+  const [showHelpRPS, setShowHelpRPS] = useState(false);
 
+  // OPTIONS
   const namesArr: string[] = ["rock", "paper", "scissors"];
 
   useEffect((): void => {
     window.addEventListener("keydown", (event: any): void => {
-      if (event.key === "Escape" && showHelp) {
-        setShowHelp(false);
+      if (event.key === "Escape" && showHelpRPS) {
+        setShowHelpRPS(false);
       }
     });
-  }, []);
+
+    return window.removeEventListener("keydown", (event: any): void => {
+      if (event.key === "Escape" && showHelpRPS) {
+        setShowHelpRPS(false);
+      }
+    });
+  }, [showHelpRPS]);
 
   return (
-    <main>
+    <main className={`theme${theme}`}>
       <div
         className="card-container"
         onClick={(event) =>
@@ -81,15 +88,21 @@ const RockPaperScissors = () => {
           <p>Ties: {tie}</p>
         </div>
         <Button
+          theme={`theme${theme}`}
           funcParam={() => handleReset(resetWins, resetLoses, resetTies)}
         />
       </div>
-      <HowTo title="How to play" func={() => setShowHelp(true)} />
+      <HowTo
+        theme={`theme${theme}`}
+        title="How to play"
+        func={() => setShowHelpRPS(true)}
+      />
       <GameInfo
+        theme={`theme${theme}`}
         h1={infoArrRPS.title}
         p={infoArrRPS.howTo}
-        func={() => setShowHelp(false)}
-        hidShow={showHelp}
+        func={() => setShowHelpRPS(false)}
+        hidShow={showHelpRPS}
       />
     </main>
   );

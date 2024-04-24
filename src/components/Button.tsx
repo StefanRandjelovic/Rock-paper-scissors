@@ -2,11 +2,16 @@
 import "@styles/Button.scss";
 
 type Func = {
-  funcParam: ()=>void;
+  theme: string;
+  funcParam: () => void;
 };
 
-const Button = ({ funcParam }: Func): React.JSX.Element => {
-  return <button onClick={funcParam}>Reset score</button>;
+const Button = ({ theme, funcParam }: Func): React.JSX.Element => {
+  return (
+    <button className={theme} onClick={funcParam}>
+      Reset score
+    </button>
+  );
 };
 
 export default Button;
