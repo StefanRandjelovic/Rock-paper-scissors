@@ -31,7 +31,6 @@ const NavBar = (): React.JSX.Element => {
 
   // URL STRING GETTER
   const { pathname } = useLocation();
-  console.log(pathname);
 
   // BACKWARDS NAVIGATION
   const navigate = useNavigate();
