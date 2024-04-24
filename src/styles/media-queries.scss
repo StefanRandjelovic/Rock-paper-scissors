@@ -1,0 +1,33 @@
+// LESS THEN 1100 PX
+@media only screen and (max-width: 1100px) {
+  main {
+    .InfoOverlay {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// LESS THEN 850 PX
+@media only screen and (max-width: 850px) {
+  main {
+    .InfoOverlay {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// LESS THEN 768 PX
+@media only screen and (max-width: 768px) {
+  #root {
+    nav {
+      .navigation {
+        #smallScreen {
+          display: block;
+        }
+        .bigScreen {
+          display: none;
+        }
+      }
+    }
+  }
+}
