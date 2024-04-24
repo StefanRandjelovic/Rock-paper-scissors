@@ -10,14 +10,15 @@ import { handleShowMenu } from "@/helpers/helperFunctions";
 import { themeSet } from "@/zustandStore/globalStore";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+// HELPERS
+import { getTitle } from "@/helpers/helperFunctions";
+
 const NavBar = (): React.JSX.Element => {
   // LOCAL STATE VARIABLE
   const [showModal, setShowModal] = useState(false);
 
   // GLOBAL STATE VARIABLE
   const { theme, setTheme } = themeSet();
-
-  const navigate = useNavigate();
 
   useEffect((): void => {
     document.documentElement.addEventListener("click", (): void =>
@@ -28,27 +29,22 @@ const NavBar = (): React.JSX.Element => {
     );
   }, []);
 
-  const getTitle: () => string | undefined = () => {
-    if (pathname === "/") {
-      return "Game Menu";
-    } else if (pathname === "/rps") {
-      return `${infoArrRPS.title}`;
-    } else if (pathname === "/rpsws") {
-      return `${infoArrRPSWS.title}`;
-    } else if (pathname === "/coin-toss") {
-      return `${infoArrCT.title}`;
-    }
-  };
-
   // URL STRING GETTER
   const { pathname } = useLocation();
   console.log(pathname);
 
+  // BACKWARDS NAVIGATION
+  const navigate = useNavigate();
+
   return (
-    <nav>
+    <nav className={`theme${theme}`}>
       <div className="navigation">
-        <p onClick={(): void => navigate(-1)}>V</p>
-        <Link to={"/"}>Home Page</Link>
+        <p id="backButton" onClick={(): void => navigate(-1)}>
+          V
+        </p>
+        <Link id="homePage" to={"/"}>
+          Home Page
+        </Link>
         <div
           id="anotherGameMenu"
           onClick={(event) => handleShowMenu(event, setShowModal, showModal)}
@@ -75,7 +71,14 @@ const NavBar = (): React.JSX.Element => {
         </div>
       </div>
 
-      <h1>{getTitle()}</h1>
+      <h1>
+        {getTitle(
+          pathname,
+          infoArrRPS.title,
+          infoArrRPSWS.title,
+          infoArrCT.title
+        )}
+      </h1>
 
       <div id="themeSelector">
         <p>Theme:</p>
