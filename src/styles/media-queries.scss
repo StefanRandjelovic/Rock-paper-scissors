@@ -31,3 +31,41 @@
     }
   }
 }
+
+// LESS THEN 450 PX
+@media only screen and (max-width: 450px) {
+  #root {
+    nav {
+      margin-bottom: 50px;
+      .navigation {
+        #smallScreen {
+          width: 30px;
+          height: 25px;
+        }
+      }
+      h1 {
+        font-size: 1rem;
+      }
+      #themeSelector {
+        font-size: 0.8rem;
+        #themeSelectorInner {
+          width: 100px;
+        }
+      }
+    }
+    main {
+      .InfoOverlay {
+        font-size: 0.9rem;
+      }
+      .card-container {
+        .card {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .howTo {
+        padding: 30px;
+      }
+    }
+  }
+}
