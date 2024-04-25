@@ -36,17 +36,24 @@
 @media only screen and (max-width: 450px) {
   #root {
     nav {
+      padding: 0 20px;
       margin-bottom: 50px;
       .navigation {
         #smallScreen {
           width: 30px;
           height: 25px;
         }
+        #menuModal {
+          width: 500%;
+        }
       }
       h1 {
         font-size: 1rem;
       }
       #themeSelector {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
         font-size: 0.8rem;
         #themeSelectorInner {
           width: 100px;
